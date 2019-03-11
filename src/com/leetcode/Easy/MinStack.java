@@ -2,7 +2,7 @@ package com.leetcode.Easy;
 
 import java.util.Stack;
 
-// 155. Min Stack 
+// 155. Min Stack
 public class MinStack {
 
     Stack<Integer> stack = new Stack<>();

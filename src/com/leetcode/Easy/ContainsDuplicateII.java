@@ -3,7 +3,7 @@ package com.leetcode.Easy;
 import java.util.HashSet;
 import java.util.Set;
 
-// 219. Contains Duplicate II    
+// 219. Contains Duplicate II
 public class ContainsDuplicateII {
 
     public boolean containsNearbyDuplicate(int[] nums, int k) {

@@ -1,6 +1,6 @@
 package com.leetcode.Easy;
 
-// 204. Count Primes    
+// 204. Count Primes
 public class CountPrimes {
 
     public boolean isPrime(int n) {
