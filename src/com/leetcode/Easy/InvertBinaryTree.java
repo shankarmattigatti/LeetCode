@@ -3,7 +3,7 @@ package com.leetcode.Easy;
 // 226. Invert Binary Tree
 public class InvertBinaryTree {
 
-    public class TreeNode {
+    public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -15,13 +15,10 @@ public class InvertBinaryTree {
 
     public TreeNode invertTree(TreeNode root) {
         if (root == null)
-            return root;
+            return null;
 
-        TreeNode left = invertTree(root.left);
-        TreeNode right = invertTree(root.right);
-
-        root.left = right;
-        root.right = left;
+        root.left = invertTree(root.right);
+        root.right = invertTree(root.left);
 
         return root;
     }
