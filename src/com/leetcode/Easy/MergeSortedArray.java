@@ -23,8 +23,6 @@ public class MergeSortedArray {
             arr[k++] = nums2[j++];
         }
 
-        for (int l = 0; l < arr.length; l++) {
-            nums1[l] = arr[l];
-        }
+        System.arraycopy(arr, 0, nums1, 0, arr.length);
     }
 }
