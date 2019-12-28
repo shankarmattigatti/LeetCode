@@ -10,14 +10,11 @@ public class ValidParentheses {
             return true;
         else if (character1 == '{' && character2 == '}')
             return true;
-        else if (character1 == '[' && character2 == ']')
-            return true;
-        else
-            return false;
+        else return character1 == '[' && character2 == ']';
     }
 
     public boolean isValid(String str) {
-        Stack<Character> stack = new Stack();
+        Stack<Character> stack = new Stack<>();
         char[] arr = str.toCharArray();
 
         for (char i : arr) {
@@ -31,6 +28,6 @@ public class ValidParentheses {
                     return false;
             }
         }
-        return stack.isEmpty() ? true : false;
+        return stack.isEmpty();
     }
 }
