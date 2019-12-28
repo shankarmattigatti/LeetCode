@@ -26,9 +26,6 @@ public class LinkedListCycle {
                 break;
         }
 
-        if (fast == null || fast.next == null)
-            return false;
-
-        return true;
+        return fast != null && fast.next != null;
     }
 }
