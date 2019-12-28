@@ -16,6 +16,6 @@ public class LongestContinuousIncreasingSubsequence {
                 len = 1;
             }
         }
-        return max < len ? len : max;
+        return Math.max(max, len);
     }
 }
