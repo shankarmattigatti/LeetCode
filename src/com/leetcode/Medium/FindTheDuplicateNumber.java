@@ -8,11 +8,11 @@ public class FindTheDuplicateNumber {
 
     public int findDuplicate(int[] nums) {
         List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < nums.length; i++) {
-            if (list.contains(nums[i]))
-                return nums[i];
+        for (int num : nums) {
+            if (list.contains(num))
+                return num;
             else
-                list.add(nums[i]);
+                list.add(num);
         }
         return 0;
     }
