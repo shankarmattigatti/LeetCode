@@ -7,7 +7,7 @@ public class MaximumProductSubarray {
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < nums.length; i++) {
             int prod = nums[i];
-            max = prod > max ? prod : max;
+            max = Math.max(prod, max);
             for (int j = i + 1; j < nums.length; j++) {
                 prod *= nums[j];
                 if (prod > max) {
