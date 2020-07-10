@@ -5,18 +5,20 @@ import java.util.List;
 
 // 66. Plus One
 public class PlusOne {
-
     public int[] plusOne(int[] digits) {
-        List<Integer> list = new ArrayList<>();
-        int k = 1;
-        for (int i = digits.length - 1; i >= 0 || k > 0; --i) {
-            list.add(0, (i >= 0 ? digits[i] + k : k) % 10);
-            k = (i >= 0 ? digits[i] + k : k) / 10;
+        if (digits.length == 0)
+            return new int[0];
+
+        List<Integer> res = new ArrayList<>();
+        int i = digits.length - 1, j = 1;
+        while (i >= 0) {
+            int sum = digits[i--] + j;
+            res.add(0, sum % 10);
+            j = sum / 10;
         }
-        int[] arr = new int[list.size()];
-        for (int i = 0; i < list.size(); i++) {
-            arr[i] = list.get(i);
-        }
-        return arr;
+        if (j != 0)
+            res.add(0, j);
+
+        return res.stream().mapToInt(x -> x).toArray();
     }
 }
